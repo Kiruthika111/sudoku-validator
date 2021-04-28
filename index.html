@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.numbertext{
+	font-size:12pt; 
+	height: 23px; 
+	width:23px; 
+	text-align:center; 
+	margin-right:4px;
+	margin-bottom:5px;
+	border-color: #fff;
+	background-color: #fff;
+	border-radius: 4px;
+	
+}
+
+.numbertext1{
+	font-size:12pt; 
+	height: 23px; 
+	width:23px; 
+	text-align:center; 
+	margin-right:4px;
+	margin-bottom:5px;
+	border-color: #fffb80;
+	border-color: #fffb80;
+	background-color: #fffb80;
+	border-radius: 4px;
+	
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1 {
+  background-color: #E3242B; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 480px) {
+ .numbertext{
+	font-size:12pt; 
+	height: 40px; 
+	width:40px; 
+	text-align:center; 
+	margin-right:4px;
+	margin-bottom:5px;
+	border-color: #fff;
+	background-color: #fff;
+	border-radius: 4px;
+	
+}
+
+.numbertext1{
+	font-size:12pt; 
+	height: 40px; 
+	width:40px; 
+	text-align:center; 
+	margin-right:4px;
+	margin-bottom:5px;
+	border-color: #fffb80;
+	background-color: #fffb80;
+	border-radius: 4px;
+	
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1 {
+  background-color: #E3242B; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+}
+</style>
+<title>Sudoku</title>
+</head>
+<body>
+
+	<div class="topnav" id="myTopnav">
+		
+		<a class="active" href="#" onclick="openNav()">&#9776;</a> 
+		<h2>SUDOKU VALIDATOR</h2> 
+		
+	</div>
+	
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<h4>RULES</h4>
+		<a href="#">1. Every square must either be empty or have a single number</a>
+		<a href="#">2. Only the numbers from 1 through to 9 can be used</a>
+		<a href="#">3. Each 3×3 box can only contain each number from 1 to 9 once</a>
+		<a href="#">4. Each vertical column can only contain each number from 1 to 9 once</a>
+		<a href="#">5. Each horizontal row can only contain each number from 1 to 9 once</a>
+	</div>
+
+	<input type="text" class="numbertext" id="myInput1" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput2" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput3" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput4" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput5" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput6" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput7" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput8" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput9" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext" id="myInput10" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput11" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput12" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput13" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput14" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput15" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput16" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput17" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput18" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext" id="myInput19" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput20" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput21" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput22" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput23" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput24" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput25" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput26" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput27" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext1" id="myInput28" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput29" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput30" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput31" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput32" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput33" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput34" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput35" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput36" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext1" id="myInput37" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput38" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput39" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput40" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput41" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput42" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput43" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput44" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput45" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext1" id="myInput46" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput47" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput48" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput49" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput50" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput51" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput52" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput53" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput54" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext" id="myInput55" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput56" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput57" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput58" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput59" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput60" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput61" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput62" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput63" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext" id="myInput64" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput65" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput66" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput67" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput68" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput69" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput70" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput71" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput72" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<br>
+	<input type="text" class="numbertext" id="myInput73" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput74" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput75" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput76" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput77" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext1" id="myInput78" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput79" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput80" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	<input type="text" class="numbertext" id="myInput81" onkeyup="this.value = this.value.replace(/[^1-9]/, '')">
+	
+	<br><br>
+    <button type="button" class="button" onclick="getInputValue();">VALIDATE</button>
+    <button type="button" class="button1" onclick="clearvalue();">CLEAR VALUES</button>
+    <script>
+	
+	var N=9;
+	var numbers = new Array(9);
+	for (var i = 0; i < numbers.length; i++) {
+		
+		numbers[i] = new Array(9);
+		
+	}
+	var result1=0;
+	
+	
+	
+
+	function clearvalue(){
+	
+		    var str1="myInput";
+			var num=1;
+			//var sum=0,count=0;
+			
+			for(var i=0;i< numbers.length;i++){
+				for(var j=0;j<numbers.length;j++){
+				
+				var str2=num.toString();
+				var res = str1.concat(str2);
+				document.getElementById(res).value="";
+				num++;
+			}
+			
+        }
+		
+	
+	}
+
+	function getInputValue(){
+            
+	
+			var str1="myInput";
+			var num=1;
+			//var sum=0,count=0;
+			
+			for(var i=0;i< numbers.length;i++){
+				for(var j=0;j<numbers.length;j++){
+				
+				var str2=num.toString();
+				var res = str1.concat(str2);
+				var temp=document.getElementById(res).value;
+				if(temp.length<1)
+					numbers[i][j]=0;
+				else
+					numbers[i][j]=parseInt(temp);
+				
+				if(numbers[i][j]<0){
+					result1 = 3;
+				}
+				if(numbers[i][j]>10){
+					result1 = 3;
+				}
+				
+				num++;
+				
+			}
+			
+        }
+		
+		
+		
+		
+		if(result1==3){
+			alert("Enter numbers between 1 and 9");
+			}
+		else{
+		result1=valid(numbers);
+		if(result1==1){
+		try{
+		//console.log(solve(numbers).map(e => "" + e));
+		solve(numbers);
+		alert("Valid Sudoku puzzle");
+		}
+		catch(err){
+			alert("Invalid Sudoku puzzle");
+		}
+		}
+		else{
+			alert("Invalid Sudoku puzzle");
+			}
+		}
+		
+		result1=0;
+	}
+
+	
+	function valid(arraySolution) {
+    for (var y = 0; y < 9; ++y) {
+        for (var x = 0; x < 9; ++x) {
+            var value = arraySolution[y][x];
+
+            if (value) {
+                // Check the line
+                for (var x2 = 0; x2 < 9; ++x2) {
+                    if (x2 != x && arraySolution[y][x2] == value) {
+                        return 0;
+                    } 
+                }
+
+                // Check the column
+                for (var y2 = 0; y2 < 9; ++y2) {
+                    if (y2 != y && arraySolution[y2][x] == value) {
+                        return 0;
+                    } 
+                }
+
+                // Check the square
+                var startY = Math.floor(y/3)*3;
+                for (var y2 = startY; y2 < startY + 3; ++y2) {
+                    var startX = Math.floor(x/3)*3;
+                    for (x2 = startX; x2 < startX + 3; ++x2) {
+                        if ((x2 != x || y2 != y) && arraySolution[y2][x2] == value) {
+                            return 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return 1;
+}
+	
+function solve(board) {
+  for (let y = 0; y < 9; y++) {
+    for (let x = 0; x < 9; x++) {
+      if (board[y][x] === 0) {
+        for (let n = 1; n <= 9; n++) {
+          if (possible(board, y, x, n)) {
+            board[y][x] = n;
+            
+            if (solve(board)) return board;
+          }
+        }
+        
+        board[y][x] = 0;
+        return false;
+      }
+    }
+  }
+  
+  return board;
+}
+
+function possible(board, y, x, n) {
+  for (let i = 0; i < 9; i++) {
+  
+    if (board[y][i] === n || board[i][x] === n) {
+      return false;
+    }
+  }
+
+  const xSquare = Math.floor(x / 3) * 3;
+  const ySquare = Math.floor(y / 3) * 3;
+
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (board[ySquare+i][xSquare+j] === n) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+	
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+		
+		
+    </script>
+</body>
+</html>
