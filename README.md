@@ -12,7 +12,10 @@ HTML5
 
 HOSTED WEBSITE: https://sudoku-validator.netlify.app/
 
-
+It accepts only numbers between 1 to 9.
+The empty cells can be left blank.
+If the given puzzle is valid an alert box with message 'valid puzzle' is displayed.
+If the given puzzle is not valid an alert box with message 'invalid puzzle' is displayed.
 
 
 
