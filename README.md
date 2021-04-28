@@ -8,3 +8,6 @@ HTML5
 •	CSS3
 •	JavaScript ES6 
 •	Bootstrap 4
+
+
+HOSTED WEBSITE: https://sudoku-validator.netlify.app/
