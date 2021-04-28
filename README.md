@@ -6,3 +6,5 @@ LANGUAGES USED
 
 •	HTML5
 •	CSS3
+•	JavaScript ES6 
+•	Bootstrap 4
