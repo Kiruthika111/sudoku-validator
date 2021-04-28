@@ -12,4 +12,4 @@ HTML5
 
 HOSTED WEBSITE: https://sudoku-validator.netlify.app/
 
-This Web application verifies if the given sudoku puzzle is validate
+This Web application verifies if the given sudoku puzzle is valid.
